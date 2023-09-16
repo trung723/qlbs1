@@ -77,6 +77,5 @@ namespace BLL
 
             Settings.Default.Save();
         }
-
     }
 }
