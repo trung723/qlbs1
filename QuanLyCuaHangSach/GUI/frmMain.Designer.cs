@@ -96,12 +96,13 @@ namespace GUI
             // 
             // btnDoiMatKhau
             // 
+            this.btnDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDoiMatKhau.FlatAppearance.BorderSize = 0;
             this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnDoiMatKhau.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.btnDoiMatKhau.IconColor = System.Drawing.Color.White;
             this.btnDoiMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDoiMatKhau.IconSize = 35;
@@ -113,7 +114,7 @@ namespace GUI
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoiMatKhau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.UseVisualStyleBackColor = false;
             this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // panelThongKeSubMenu
@@ -163,25 +164,27 @@ namespace GUI
             // 
             // btnDangXuat
             // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.LightGray;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 964);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(233, 45);
             this.btnDangXuat.TabIndex = 8;
             this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnThongKe
             // 
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.FileContract;
             this.btnThongKe.IconColor = System.Drawing.Color.White;
@@ -195,7 +198,7 @@ namespace GUI
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.UseVisualStyleBackColor = false;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // panelTimKiemSubMenu
@@ -299,10 +302,11 @@ namespace GUI
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
@@ -316,7 +320,7 @@ namespace GUI
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // panelKinhDoanhSubMenu
@@ -366,10 +370,11 @@ namespace GUI
             // 
             // btnKinhDoanh
             // 
+            this.btnKinhDoanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnKinhDoanh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKinhDoanh.FlatAppearance.BorderSize = 0;
             this.btnKinhDoanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKinhDoanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKinhDoanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKinhDoanh.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnKinhDoanh.IconChar = FontAwesome.Sharp.IconChar.BusinessTime;
             this.btnKinhDoanh.IconColor = System.Drawing.Color.White;
@@ -383,7 +388,7 @@ namespace GUI
             this.btnKinhDoanh.Text = "Kinh doanh";
             this.btnKinhDoanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKinhDoanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKinhDoanh.UseVisualStyleBackColor = true;
+            this.btnKinhDoanh.UseVisualStyleBackColor = false;
             this.btnKinhDoanh.Click += new System.EventHandler(this.btnKinhDoanh_Click);
             // 
             // panelQuanLySubMenu
@@ -487,12 +492,13 @@ namespace GUI
             // 
             // btnQuanLy
             // 
+            this.btnQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQuanLy.FlatAppearance.BorderSize = 0;
             this.btnQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLy.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnQuanLy.IconChar = FontAwesome.Sharp.IconChar.BlackTie;
+            this.btnQuanLy.IconChar = FontAwesome.Sharp.IconChar.UserCog;
             this.btnQuanLy.IconColor = System.Drawing.Color.White;
             this.btnQuanLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuanLy.IconSize = 35;
@@ -504,7 +510,7 @@ namespace GUI
             this.btnQuanLy.Text = "Quản lý";
             this.btnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuanLy.UseVisualStyleBackColor = true;
+            this.btnQuanLy.UseVisualStyleBackColor = false;
             this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // panelLogo
@@ -518,8 +524,9 @@ namespace GUI
             // 
             // picLogo
             // 
+            this.picLogo.BackColor = System.Drawing.Color.Blue;
             this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
@@ -552,7 +559,7 @@ namespace GUI
             // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(18)))), ((int)(((byte)(80)))));
+            this.panelTitle.BackColor = System.Drawing.Color.Navy;
             this.panelTitle.Controls.Add(this.btnCloseChildForm);
             this.panelTitle.Controls.Add(this.lblFormName);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -579,11 +586,11 @@ namespace GUI
             // lblFormName
             // 
             this.lblFormName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormName.ForeColor = System.Drawing.Color.White;
             this.lblFormName.Location = new System.Drawing.Point(0, 0);
             this.lblFormName.Name = "lblFormName";
-            this.lblFormName.Size = new System.Drawing.Size(213, 45);
+            this.lblFormName.Size = new System.Drawing.Size(211, 45);
             this.lblFormName.TabIndex = 7;
             this.lblFormName.Text = "<tenformcon>";
             this.lblFormName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

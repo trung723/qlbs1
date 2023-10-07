@@ -109,6 +109,7 @@ namespace GUI.Pages
             this.cboTheLoai.Name = "cboTheLoai";
             this.cboTheLoai.Size = new System.Drawing.Size(242, 28);
             this.cboTheLoai.TabIndex = 15;
+            this.cboTheLoai.SelectedIndexChanged += new System.EventHandler(this.cboTheLoai_SelectedIndexChanged);
             // 
             // btnHuy
             // 

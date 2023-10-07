@@ -29,8 +29,8 @@ namespace GUI.Pages
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBanSach));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,6 +56,7 @@ namespace GUI.Pages
             this.clKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnChiTietHoaDon = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -321,8 +322,8 @@ namespace GUI.Pages
             // clMaHD
             // 
             this.clMaHD.DataPropertyName = "MaHD";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
-            this.clMaHD.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
+            this.clMaHD.DefaultCellStyle = dataGridViewCellStyle1;
             this.clMaHD.HeaderText = "Mã hóa đơn";
             this.clMaHD.MinimumWidth = 6;
             this.clMaHD.Name = "clMaHD";
@@ -330,8 +331,8 @@ namespace GUI.Pages
             // clNhanVien
             // 
             this.clNhanVien.DataPropertyName = "HoTenNV";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Green;
-            this.clNhanVien.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
+            this.clNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.clNhanVien.HeaderText = "Nhân viên";
             this.clNhanVien.MinimumWidth = 6;
             this.clNhanVien.Name = "clNhanVien";
@@ -359,6 +360,7 @@ namespace GUI.Pages
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnChiTietHoaDon);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
@@ -368,6 +370,16 @@ namespace GUI.Pages
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 41);
             this.panel1.TabIndex = 4;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(384, 5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(116, 30);
+            this.btnReset.TabIndex = 12;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnChiTietHoaDon
             // 
@@ -387,7 +399,7 @@ namespace GUI.Pages
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(251, 5);
+            this.btnXoa.Location = new System.Drawing.Point(262, 5);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(116, 30);
             this.btnXoa.TabIndex = 10;
@@ -397,7 +409,7 @@ namespace GUI.Pages
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(129, 5);
+            this.btnSua.Location = new System.Drawing.Point(140, 5);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(116, 30);
             this.btnSua.TabIndex = 9;
@@ -407,7 +419,7 @@ namespace GUI.Pages
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(7, 5);
+            this.btnThem.Location = new System.Drawing.Point(18, 5);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(116, 30);
             this.btnThem.TabIndex = 8;
@@ -512,5 +524,6 @@ namespace GUI.Pages
         private System.Windows.Forms.DataGridViewTextBoxColumn clTongTien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNhanVien;
+        private System.Windows.Forms.Button btnReset;
     }
 }

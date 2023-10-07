@@ -210,5 +210,10 @@ namespace GUI.Pages
             }
         }
         #endregion
+
+        private void cboTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

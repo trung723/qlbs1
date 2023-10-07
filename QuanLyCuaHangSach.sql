@@ -132,7 +132,7 @@ GO
 
 --------------------------------------THÊM DỮ LIỆU VÀO CÁC BẢNG TRONG DATABASE--------------------------------------
 --Bảng Nhân Viên
-INSERT INTO NhanVien VALUES ('NV01', N'Lê Huỳnh Nhật Tâm', '1/1/1999', N'Nam', N'Tp Hồ Chí Minh', '0123456789');
+INSERT INTO NhanVien VALUES ('NV01', N'Nguyễn Thành Trung', '4/3/2003', N'Nam', N'Tp Hà Nội', '0123456789');
 INSERT INTO NhanVien VALUES ('NV02', N'Đặng Thùy Trang', '1/1/2001', N'Nữ', N'Hà Nội', '0132456789');
 INSERT INTO NhanVien VALUES ('NV03', N'Lê Đức Tiến', '1/1/1989', N'Nam', N'Tp Đà Nẵng', '0123476589');
 INSERT INTO NhanVien VALUES ('NV04', N'Đinh Thanh Phong', '25/8/1999', N'Nam', N'Tp Hải Phòng', '0123498819');

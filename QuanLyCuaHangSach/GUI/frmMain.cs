@@ -249,8 +249,13 @@ namespace GUI
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DangNhap();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                DangNhap();
+            }
         }
         #endregion
 

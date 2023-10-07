@@ -270,5 +270,12 @@ namespace GUI.Pages
 
             f.ShowDialog();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtMaHD.Text = string.Empty;
+            txtNhanVien.Text = string.Empty;
+            txtTimKiem.Text = string.Empty;
+        }
     }
 }

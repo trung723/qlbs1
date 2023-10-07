@@ -42,7 +42,9 @@ namespace GUI.Popups
                 Settings.Default.Save();
 
                 this.DialogResult = DialogResult.OK;
-            }else
+                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
             {
                 MessageBox.Show("Tài khoản và mật khẩu không chính xác!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -50,7 +52,12 @@ namespace GUI.Popups
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void checkHienMK_CheckedChanged(object sender, EventArgs e)
@@ -91,6 +98,23 @@ namespace GUI.Popups
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Tạo một instance của form ResetPasswordForm
+           RePass resetPasswordForm = new RePass();
+
+            // Ẩn form hiện tại
+            this.Hide();
+
+            // Hiển thị form ResetPasswordForm
+            resetPasswordForm.ShowDialog();
+
+            // Sau khi form ResetPasswordForm đóng, hiện lại form hiện tại
+            this.Show();
         }
     }
 }

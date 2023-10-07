@@ -206,5 +206,10 @@ namespace BLL
             Database.TaiKhoans.DeleteOnSubmit(tk);
             Database.SubmitChanges();
         }
+
+        public static bool IsValid(string query)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
