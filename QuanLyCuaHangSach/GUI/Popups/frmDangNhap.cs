@@ -116,5 +116,19 @@ namespace GUI.Popups
             // Sau khi form ResetPasswordForm đóng, hiện lại form hiện tại
             this.Show();
         }
+
+        private void llbDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmThemTaiKhoan themTaiKhoan = new frmThemTaiKhoan();
+
+            // Ẩn form hiện tại
+            this.Hide();
+
+            // Hiển thị form ResetPasswordForm
+            themTaiKhoan.ShowDialog();
+
+            // Sau khi form ResetPasswordForm đóng, hiện lại form hiện tại
+            this.Show();
+        }
     }
 }

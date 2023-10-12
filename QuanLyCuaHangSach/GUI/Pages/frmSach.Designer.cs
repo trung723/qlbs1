@@ -54,9 +54,12 @@ namespace GUI.Pages
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNXB = new System.Windows.Forms.Button();
+            this.btnTacGia = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnThuVien = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -299,6 +302,7 @@ namespace GUI.Pages
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnThuVien);
             this.panel2.Controls.Add(this.lblTong);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 487);
@@ -317,6 +321,8 @@ namespace GUI.Pages
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnNXB);
+            this.panel1.Controls.Add(this.btnTacGia);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThem);
@@ -325,6 +331,38 @@ namespace GUI.Pages
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(624, 41);
             this.panel1.TabIndex = 0;
+            // 
+            // btnNXB
+            // 
+            this.btnNXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNXB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnNXB.FlatAppearance.BorderSize = 0;
+            this.btnNXB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNXB.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNXB.Location = new System.Drawing.Point(512, 3);
+            this.btnNXB.Name = "btnNXB";
+            this.btnNXB.Size = new System.Drawing.Size(100, 30);
+            this.btnNXB.TabIndex = 17;
+            this.btnNXB.Text = "NXB";
+            this.btnNXB.UseVisualStyleBackColor = false;
+            this.btnNXB.Click += new System.EventHandler(this.btnNXB_Click);
+            // 
+            // btnTacGia
+            // 
+            this.btnTacGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnTacGia.FlatAppearance.BorderSize = 0;
+            this.btnTacGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTacGia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnTacGia.Location = new System.Drawing.Point(395, 3);
+            this.btnTacGia.Name = "btnTacGia";
+            this.btnTacGia.Size = new System.Drawing.Size(100, 30);
+            this.btnTacGia.TabIndex = 16;
+            this.btnTacGia.Text = "Tác giả";
+            this.btnTacGia.UseVisualStyleBackColor = false;
+            this.btnTacGia.Click += new System.EventHandler(this.btnTacGia_Click);
             // 
             // btnXoa
             // 
@@ -355,6 +393,21 @@ namespace GUI.Pages
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnThuVien
+            // 
+            this.btnThuVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThuVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnThuVien.FlatAppearance.BorderSize = 0;
+            this.btnThuVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThuVien.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnThuVien.Location = new System.Drawing.Point(514, 5);
+            this.btnThuVien.Name = "btnThuVien";
+            this.btnThuVien.Size = new System.Drawing.Size(100, 30);
+            this.btnThuVien.TabIndex = 18;
+            this.btnThuVien.Text = "Thư viện";
+            this.btnThuVien.UseVisualStyleBackColor = false;
             // 
             // frmSach
             // 
@@ -409,5 +462,8 @@ namespace GUI.Pages
         private System.Windows.Forms.DataGridViewTextBoxColumn clTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn clSoLuong;
+        private System.Windows.Forms.Button btnNXB;
+        private System.Windows.Forms.Button btnTacGia;
+        private System.Windows.Forms.Button btnThuVien;
     }
 }

@@ -48,6 +48,7 @@ namespace GUI.Pages
             this.dtpThang = new System.Windows.Forms.DateTimePicker();
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
+            this.btnTKBCS = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -187,6 +188,7 @@ namespace GUI.Pages
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 519F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnTKBCS, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -255,6 +257,22 @@ namespace GUI.Pages
             this.btnXem.UseVisualStyleBackColor = false;
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
+            // btnTKBCS
+            // 
+            this.btnTKBCS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKBCS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnTKBCS.FlatAppearance.BorderSize = 0;
+            this.btnTKBCS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKBCS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKBCS.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnTKBCS.Location = new System.Drawing.Point(857, 3);
+            this.btnTKBCS.Name = "btnTKBCS";
+            this.btnTKBCS.Size = new System.Drawing.Size(116, 30);
+            this.btnTKBCS.TabIndex = 13;
+            this.btnTKBCS.Text = "TKBCS";
+            this.btnTKBCS.UseVisualStyleBackColor = false;
+            this.btnTKBCS.Click += new System.EventHandler(this.btnTKBCS_Click);
+            // 
             // frmThongKeSoLuongNhap
             // 
             this.AcceptButton = this.btnXem;
@@ -298,5 +316,6 @@ namespace GUI.Pages
         private System.Windows.Forms.DataGridViewTextBoxColumn clThoiDiemNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn clGhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTongTien;
+        private System.Windows.Forms.Button btnTKBCS;
     }
 }

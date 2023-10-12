@@ -54,5 +54,16 @@ namespace DAL.Properties {
                 return ((string)(this["QuanLyCuaHangSachConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-68EE0FR\\SQLEXPRESS;Initial Catalog=DoAnQLBS;Persist Security " +
+            "Info=True;User ID=sa;Password=123456")]
+        public string DoAnQLBSConnectionString {
+            get {
+                return ((string)(this["DoAnQLBSConnectionString"]));
+            }
+        }
     }
 }

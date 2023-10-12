@@ -27,7 +27,7 @@ namespace GUI.Pages
         private void frmNhapSach_Load(object sender, EventArgs e)
         {
             LockControls();
-            LoadDgv();
+            LoadDgv(); 
             dgvPhieuNhap_Click(sender, e);
         }
 

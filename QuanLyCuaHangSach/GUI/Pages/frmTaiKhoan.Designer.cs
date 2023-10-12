@@ -34,6 +34,7 @@ namespace GUI.Pages
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaiKhoan));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.btnDatLai = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -101,6 +102,22 @@ namespace GUI.Pages
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm tài khoản";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnThem.Location = new System.Drawing.Point(393, 5);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 30);
+            this.btnThem.TabIndex = 51;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDatLai
             // 
@@ -325,6 +342,7 @@ namespace GUI.Pages
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.lblTong);
             this.panel2.Controls.Add(this.btnXemTatCa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -407,5 +425,6 @@ namespace GUI.Pages
         private System.Windows.Forms.DataGridViewTextBoxColumn clTenTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn clQuyen;
+        private System.Windows.Forms.Button btnThem;
     }
 }

@@ -34,6 +34,7 @@ namespace GUI.Popups
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@ namespace GUI.Popups
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -123,6 +123,18 @@ namespace GUI.Popups
             this.panel4.Size = new System.Drawing.Size(355, 335);
             this.panel4.TabIndex = 29;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(66, 215);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(80, 13);
+            this.linkLabel1.TabIndex = 30;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Quên mật khẩu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::GUI.Properties.Resources.Password;
@@ -185,7 +197,7 @@ namespace GUI.Popups
             this.checkHienMK.AutoSize = true;
             this.checkHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkHienMK.ForeColor = System.Drawing.Color.Transparent;
-            this.checkHienMK.Location = new System.Drawing.Point(207, 225);
+            this.checkHienMK.Location = new System.Drawing.Point(207, 215);
             this.checkHienMK.Margin = new System.Windows.Forms.Padding(2);
             this.checkHienMK.Name = "checkHienMK";
             this.checkHienMK.Size = new System.Drawing.Size(118, 21);
@@ -263,18 +275,6 @@ namespace GUI.Popups
             this.label2.Size = new System.Drawing.Size(146, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Book Store Manager";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(64, 225);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 13);
-            this.linkLabel1.TabIndex = 30;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmDangNhap
             // 

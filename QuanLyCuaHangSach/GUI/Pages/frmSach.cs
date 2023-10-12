@@ -215,5 +215,35 @@ namespace GUI.Pages
         {
 
         }
+
+        private void btnTacGia_Click(object sender, EventArgs e)
+        {
+           
+            frmTacGia frmTacGia = new frmTacGia();
+
+           
+            this.Hide();
+
+         
+            frmTacGia.ShowDialog();
+
+            
+            this.Show();
+        }
+
+        private void btnNXB_Click(object sender, EventArgs e)
+        {
+            
+            frmNXB frmNXB = new frmNXB();
+
+            
+            this.Hide();
+
+            
+            frmNXB.ShowDialog();
+
+        
+            this.Show();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace GUI.Pages
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTheLoai));
@@ -39,22 +40,26 @@ namespace GUI.Pages
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvTheLoai = new System.Windows.Forms.DataGridView();
-            this.clMaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.dgvTheLoai = new System.Windows.Forms.DataGridView();
+            this.clMaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsSource = new GUI.Reports.dsSource();
+            this.dtHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtHoaDonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -76,9 +81,9 @@ namespace GUI.Pages
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.dgvTheLoai);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvTheLoai);
             this.splitContainer1.Size = new System.Drawing.Size(862, 528);
             this.splitContainer1.SplitterDistance = 287;
             this.splitContainer1.TabIndex = 0;
@@ -149,51 +154,6 @@ namespace GUI.Pages
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã thể loại:";
             // 
-            // dgvTheLoai
-            // 
-            this.dgvTheLoai.AllowUserToAddRows = false;
-            this.dgvTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTheLoai.BackgroundColor = System.Drawing.Color.White;
-            this.dgvTheLoai.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clMaLoai,
-            this.clTenLoai});
-            this.dgvTheLoai.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvTheLoai.Location = new System.Drawing.Point(12, 47);
-            this.dgvTheLoai.Name = "dgvTheLoai";
-            this.dgvTheLoai.RowHeadersVisible = false;
-            this.dgvTheLoai.RowHeadersWidth = 51;
-            this.dgvTheLoai.RowTemplate.Height = 24;
-            this.dgvTheLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTheLoai.Size = new System.Drawing.Size(547, 434);
-            this.dgvTheLoai.TabIndex = 2;
-            this.dgvTheLoai.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvTheLoai_RowsAdded);
-            this.dgvTheLoai.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvTheLoai_RowsRemoved);
-            this.dgvTheLoai.Click += new System.EventHandler(this.dgvTheLoai_Click);
-            this.dgvTheLoai.DoubleClick += new System.EventHandler(this.dgvTheLoai_DoubleClick);
-            // 
-            // clMaLoai
-            // 
-            this.clMaLoai.DataPropertyName = "MaLoai";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
-            this.clMaLoai.DefaultCellStyle = dataGridViewCellStyle1;
-            this.clMaLoai.HeaderText = "Mã loại";
-            this.clMaLoai.MinimumWidth = 6;
-            this.clMaLoai.Name = "clMaLoai";
-            // 
-            // clTenLoai
-            // 
-            this.clTenLoai.DataPropertyName = "TenLoai";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
-            this.clTenLoai.DefaultCellStyle = dataGridViewCellStyle2;
-            this.clTenLoai.HeaderText = "Tên loại";
-            this.clTenLoai.MinimumWidth = 6;
-            this.clTenLoai.Name = "clTenLoai";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lblTong);
@@ -253,6 +213,61 @@ namespace GUI.Pages
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // dgvTheLoai
+            // 
+            this.dgvTheLoai.AllowUserToAddRows = false;
+            this.dgvTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTheLoai.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTheLoai.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clMaLoai,
+            this.clTenLoai});
+            this.dgvTheLoai.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvTheLoai.Location = new System.Drawing.Point(12, 47);
+            this.dgvTheLoai.Name = "dgvTheLoai";
+            this.dgvTheLoai.RowHeadersVisible = false;
+            this.dgvTheLoai.RowHeadersWidth = 51;
+            this.dgvTheLoai.RowTemplate.Height = 24;
+            this.dgvTheLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTheLoai.Size = new System.Drawing.Size(547, 434);
+            this.dgvTheLoai.TabIndex = 2;
+            this.dgvTheLoai.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvTheLoai_RowsAdded);
+            this.dgvTheLoai.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvTheLoai_RowsRemoved);
+            this.dgvTheLoai.Click += new System.EventHandler(this.dgvTheLoai_Click);
+            this.dgvTheLoai.DoubleClick += new System.EventHandler(this.dgvTheLoai_DoubleClick);
+            // 
+            // clMaLoai
+            // 
+            this.clMaLoai.DataPropertyName = "MaLoai";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
+            this.clMaLoai.DefaultCellStyle = dataGridViewCellStyle1;
+            this.clMaLoai.HeaderText = "Mã loại";
+            this.clMaLoai.MinimumWidth = 6;
+            this.clMaLoai.Name = "clMaLoai";
+            // 
+            // clTenLoai
+            // 
+            this.clTenLoai.DataPropertyName = "TenLoai";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
+            this.clTenLoai.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clTenLoai.HeaderText = "Tên loại";
+            this.clTenLoai.MinimumWidth = 6;
+            this.clTenLoai.Name = "clTenLoai";
+            // 
+            // dsSource
+            // 
+            this.dsSource.DataSetName = "dsSource";
+            this.dsSource.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtHoaDonBindingSource
+            // 
+            this.dtHoaDonBindingSource.DataMember = "dtHoaDon";
+            this.dtHoaDonBindingSource.DataSource = this.dsSource;
+            // 
             // frmTheLoai
             // 
             this.AcceptButton = this.btnLuu;
@@ -271,10 +286,12 @@ namespace GUI.Pages
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtHoaDonBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +314,7 @@ namespace GUI.Pages
         private System.Windows.Forms.DataGridView dgvTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTenLoai;
+        private Reports.dsSource dsSource;
+        private System.Windows.Forms.BindingSource dtHoaDonBindingSource;
     }
 }

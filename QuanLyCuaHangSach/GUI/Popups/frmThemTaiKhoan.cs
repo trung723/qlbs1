@@ -9,25 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using BLL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI.Popups
 {
     public partial class frmThemTaiKhoan : Form
     {
         private NhanVien nhanVien;
+        private TaiKhoan currentUser;
         public frmThemTaiKhoan()
         {
             InitializeComponent();
         }
-        public frmThemTaiKhoan(string maNV)
+        public frmThemTaiKhoan(string maNV , string userName)
         {
             InitializeComponent();
+            currentUser = TaiKhoanBLL.Select(userName);
             nhanVien = NhanVienBLL.Select(maNV);
         }
 
         private void frmThemTaiKhoan_Load(object sender, EventArgs e)
         {
-            lblName.Text = nhanVien.HoTen;
+            lblName.Text = TaiKhoanBLL.fullUserName(currentUser);
 
             //load cboquyen
             cboQuyen.DataSource = QuyenBLL.SelectAll();

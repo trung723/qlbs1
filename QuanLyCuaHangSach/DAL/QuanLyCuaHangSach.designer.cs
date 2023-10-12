@@ -22,7 +22,7 @@ namespace DAL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyCuaHangSach")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DoAnQLBS")]
 	public partial class QuanLyCuaHangSachDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -60,10 +60,16 @@ namespace DAL
     partial void InsertTaiKhoan(TaiKhoan instance);
     partial void UpdateTaiKhoan(TaiKhoan instance);
     partial void DeleteTaiKhoan(TaiKhoan instance);
+    partial void InsertNXB(NXB instance);
+    partial void UpdateNXB(NXB instance);
+    partial void DeleteNXB(NXB instance);
+    partial void InsertTacGia(TacGia instance);
+    partial void UpdateTacGia(TacGia instance);
+    partial void DeleteTacGia(TacGia instance);
     #endregion
 		
 		public QuanLyCuaHangSachDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QuanLyCuaHangSachConnectionString2, mappingSource)
+				base(global::DAL.Properties.Settings.Default.DoAnQLBSConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -169,6 +175,22 @@ namespace DAL
 			get
 			{
 				return this.GetTable<TaiKhoan>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NXB> NXBs
+		{
+			get
+			{
+				return this.GetTable<NXB>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TacGia> TacGias
+		{
+			get
+			{
+				return this.GetTable<TacGia>();
 			}
 		}
 	}
@@ -2250,6 +2272,178 @@ namespace DAL
 						this._MaQuyen = default(string);
 					}
 					this.SendPropertyChanged("Quyen");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NXB")]
+	public partial class NXB : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaNXB;
+		
+		private string _TenNXB;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaNXBChanging(string value);
+    partial void OnMaNXBChanged();
+    partial void OnTenNXBChanging(string value);
+    partial void OnTenNXBChanged();
+    #endregion
+		
+		public NXB()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNXB", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaNXB
+		{
+			get
+			{
+				return this._MaNXB;
+			}
+			set
+			{
+				if ((this._MaNXB != value))
+				{
+					this.OnMaNXBChanging(value);
+					this.SendPropertyChanging();
+					this._MaNXB = value;
+					this.SendPropertyChanged("MaNXB");
+					this.OnMaNXBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNXB", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenNXB
+		{
+			get
+			{
+				return this._TenNXB;
+			}
+			set
+			{
+				if ((this._TenNXB != value))
+				{
+					this.OnTenNXBChanging(value);
+					this.SendPropertyChanging();
+					this._TenNXB = value;
+					this.SendPropertyChanged("TenNXB");
+					this.OnTenNXBChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TacGia")]
+	public partial class TacGia : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaTacGia;
+		
+		private string _TenTacGia;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaTacGiaChanging(string value);
+    partial void OnMaTacGiaChanged();
+    partial void OnTenTacGiaChanging(string value);
+    partial void OnTenTacGiaChanged();
+    #endregion
+		
+		public TacGia()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTacGia", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaTacGia
+		{
+			get
+			{
+				return this._MaTacGia;
+			}
+			set
+			{
+				if ((this._MaTacGia != value))
+				{
+					this.OnMaTacGiaChanging(value);
+					this.SendPropertyChanging();
+					this._MaTacGia = value;
+					this.SendPropertyChanged("MaTacGia");
+					this.OnMaTacGiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTacGia", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenTacGia
+		{
+			get
+			{
+				return this._TenTacGia;
+			}
+			set
+			{
+				if ((this._TenTacGia != value))
+				{
+					this.OnTenTacGiaChanging(value);
+					this.SendPropertyChanging();
+					this._TenTacGia = value;
+					this.SendPropertyChanged("TenTacGia");
+					this.OnTenTacGiaChanged();
 				}
 			}
 		}

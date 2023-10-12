@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DAL;
+using GUI.Popups;
 
 namespace GUI.Pages
 {
@@ -182,5 +183,19 @@ namespace GUI.Pages
             txtTimKiem.Text = string.Empty;
         }
         #endregion
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemTaiKhoan themTaiKhoan = new frmThemTaiKhoan();
+
+            // Ẩn form hiện tại
+            this.Hide();
+
+            // Hiển thị form ResetPasswordForm
+            themTaiKhoan.ShowDialog();
+
+            // Sau khi form ResetPasswordForm đóng, hiện lại form hiện tại
+            this.Show();
+        }
     }
 }

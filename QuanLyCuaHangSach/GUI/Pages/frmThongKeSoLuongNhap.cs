@@ -98,5 +98,20 @@ namespace GUI.Pages
         {
             lblTong.Text = string.Format("Tổng: {0} phiếu nhập", dgvPhieuNhap.Rows.Count);
         }
+
+        private void btnTKBCS_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của form ResetPasswordForm
+            frmTKBCSach resetPasswordForm = new frmTKBCSach();
+
+            // Ẩn form hiện tại
+            this.Hide();
+
+            // Hiển thị form ResetPasswordForm
+            resetPasswordForm.ShowDialog();
+
+            // Sau khi form ResetPasswordForm đóng, hiện lại form hiện tại
+            this.Show();
+        }
     }
 }

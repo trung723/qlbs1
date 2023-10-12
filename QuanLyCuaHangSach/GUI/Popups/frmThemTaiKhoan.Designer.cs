@@ -181,9 +181,9 @@ namespace GUI.Popups
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblName.Location = new System.Drawing.Point(110, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(158, 25);
+            this.lblName.Size = new System.Drawing.Size(199, 25);
             this.lblName.TabIndex = 46;
-            this.lblName.Text = "<TenNhanVien>";
+            this.lblName.Text = "Nguyễn Thành Trung";
             // 
             // frmThemTaiKhoan
             // 
